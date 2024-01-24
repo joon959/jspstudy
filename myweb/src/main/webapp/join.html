@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>우편번호</title>
+	<script>
+		function openFindAddr(){
+			window.open('findAddr.html','findAddr','width=500, height=200');
+		}
+	</script>
+</head>
+<body>
+	<h1>회원가입 중...</h1>
+	<form name="fm">
+	<label>우편번호</label>
+	<input type="text" name="zip" size="6" readonly>
+		<a href="javascript:openFindAddr();">[주소검색]</a><br>
+	<label>기본주소</label>
+	<input type="text" name="addr1" size="35" readonly><br>
+	<label>상세주소</label>
+	<input type="text" name="addr2" size="35"><br>
+	</form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>주소 찾기</title>
+<script>
+	function autoWrite(){
+		var fullAddr = document.findAddr.address.value;
+		var zip = fullAddr.substring(1,6);
+		var addr = fullAddr.substring(8);
+		/* 나를 열었던 브라우저 - opener */
+		opener.document.fm.zip.value = zip;
+		opener.document.fm.addr1.value = addr;
+		window.self.close();
+	}
+</script>
+</head>
+<body>
+	<form name="findAddr">
+		<fieldset>
+			<legend>주소 검색</legend>
+			<label>주소</label>
+			<input type="text" name="address" size="35"><br>
+			<input type="button" value="주소확인" onclick="autoWrite();">
+		</fieldset>
+	</form>
+</body>
+</html>
